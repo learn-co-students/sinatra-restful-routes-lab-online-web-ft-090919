@@ -1,0 +1,19 @@
+<h1> Recipe: <%= @recipe.name.capitalize %></h1>
+<h2>Ingredients:</h2>
+<ol>
+<% ingredients = @recipe.ingredients.split(",") %>
+<% ingredients.each_with_index do |ingredient, index| %>
+    
+    <li><%= " #{ingredient}" %></li>
+    <%end %>
+</ol>
+
+<h2> Cook Time:</h2>
+<p><%= @recipe.cook_time %></p> 
+
+<form action="/recipes/<%=@recipe.id%>" method='POST'>
+<input id="hidden" type="hidden" name="_method" value="delete">
+<input type="submit" value='delete'>
+</form>
+
+<a href='/recipes'> Back to recipe list </a>

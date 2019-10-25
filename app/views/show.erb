@@ -6,7 +6,7 @@
     
     <li><%= " #{ingredient}" %></li>
     <%end %>
-    </ol>
+</ol>
 
 <h2> Cook Time:</h2>
 <p><%= @recipe.cook_time %></p> 
@@ -15,3 +15,5 @@
 <input id="hidden" type="hidden" name="_method" value="delete">
 <input type="submit" value='delete'>
 </form>
+
+<a href='/recipes'> Back to recipe list </a>
